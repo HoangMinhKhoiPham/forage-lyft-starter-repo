@@ -13,7 +13,7 @@ class CarFactory(Car, ABC):
 
     def create_calliope(self, current_date, last_service_date, current_mileage, last_service_mileage)->Car:
         engine = CapuletEngine(current_mileage=current_mileage, last_service_mileage=last_service_mileage, )
-        battery = SplindlerBattery(current_date=current_date,last_service_date=last_service_date)
+        battery = SplindlerBattery(current_date=current_date, last_service_date=last_service_date)
         return Car(engine, battery)
 
     def create_glissade(self, current_date, last_service_date, current_mileage, last_service_mileage) -> Car:
