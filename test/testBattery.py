@@ -4,7 +4,7 @@ from Battery.NubbinBattery import NubbinBattery
 from Battery.SplindlerBattery import SplindlerBattery
 
 
-class test_SpindlerBattery(unittest.TestCase):
+class TestSpindlerBattery(unittest.TestCase):
     def test_needs_service_true(self):
         current_date = date.fromisoformat("2020-05-15")
         last_service_date = date.fromisoformat("2018-01-25")
@@ -17,8 +17,7 @@ class test_SpindlerBattery(unittest.TestCase):
         battery = SplindlerBattery(current_date, last_service_date)
         self.assertFalse(battery.needs_service())
 
-
-class test_NubbinBattery(unittest.TestCase):
+class TestNubbinBattery(unittest.TestCase):
     def test_needs_service_true(self):
         current_date = date.fromisoformat("2020-05-15")
         last_service_date = date.fromisoformat("2016-01-25")
